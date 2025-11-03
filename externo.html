@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulário - Inspeção Externa</title>
+  <style>
+    :root {
+      --secondary-color: #00A86B;
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      --input-radius: 6px;
+    }
+    body {
+      margin:0;
+      padding:20px;
+      background:#ffffff;
+      font-family: var(--font-family);
+    }
+    header {
+      text-align:center;
+      margin-bottom:30px;
+    }
+    header img {
+      max-width:140px;
+      height:auto;
+    }
+    header h1 {
+      margin:10px 0;
+      font-size:1.5rem;
+      color:#333;
+    }
+    form {
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+    label {
+      font-size:1rem;
+      color:#555;
+    }
+    input[type="text"],
+    input[type="date"],
+    select,
+    input[type="file"] {
+      width:100%;
+      padding:10px;
+      font-size:1rem;
+      border:1px solid #ccc;
+      border-radius: var(--input-radius);
+    }
+    input[type="submit"] {
+      padding:14px;
+      font-size:1.1rem;
+      background: var(--secondary-color);
+      color:#fff;
+      border:none;
+      border-radius: var(--input-radius);
+      cursor:pointer;
+      transition: filter .3s ease;
+    }
+    input[type="submit"]:hover {
+      filter: brightness(0.9);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logomarca Termelétrica Pernambuco III">
+    <h1>Inspeção Externa</h1>
+  </header>
+
+  <form id="formExterno" action="https://script.google.com/macros/s/SEU_SCRIPT_ID/exec" method="post" enctype="multipart/form-data">
+    <label for="visitante">Nome do Visitante/Externo:</label>
+    <input type="text" id="visitante" name="visitante" required>
+
+    <label for="empresa">Empresa:</label>
+    <input type="text" id="empresa" name="empresa">
+
+    <label for="data">Data:</label>
+    <input type="date" id="data" name="data" required>
+
+    <label for="horarioEntrada">Horário de Entrada:</label>
+    <input type="text" id="horarioEntrada" name="horarioEntrada">
+
+    <label for="horarioSaida">Horário de Saída:</label>
+    <input type="text" id="horarioSaida" name="horarioSaida">
+
+    <label for="fotoExterno">Foto (opcional):</label>
+    <input type="file" id="fotoExterno" name="foto" accept="image/*">
+
+    <input type="hidden" name="tipoFormulario" value="EXTERNO">
+
+    <input type="submit" value="Enviar Inspeção">
+  </form>
+
+</body>
+</html>
