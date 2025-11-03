@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inspeção On-Line – Termelétrica Pernambuco III</title>
+  <style>
+    :root {
+      --primary-color: #004C99;
+      --secondary-color: #00A86B;
+      --button-radius: 8px;
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      margin:0;
+      padding:0;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      background-color:#f5f5f5;
+      font-family: var(--font-family);
+    }
+    header {
+      margin-bottom:40px;
+      text-align:center;
+    }
+    header img {
+      max-width:180px;
+      height:auto;
+    }
+    header h1 {
+      margin:10px 0 0 0;
+      font-size:1.8rem;
+      color: #333;
+    }
+    .buttons {
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+      width:90%;
+      max-width:300px;
+    }
+    .buttons a {
+      text-decoration:none;
+    }
+    .btn {
+      display:inline-block;
+      width:100%;
+      padding:16px;
+      font-size:1.2rem;
+      text-align:center;
+      color:#fff;
+      background-color: var(--primary-color);
+      border:none;
+      border-radius: var(--button-radius);
+      transition: background-color .3s ease;
+    }
+    .btn.secondary {
+      background-color: var(--secondary-color);
+    }
+    .btn:hover {
+      filter: brightness(0.9);
+    }
+    @media (min-width:600px) {
+      .buttons {
+        flex-direction: row;
+      }
+      .buttons a {
+        width:48%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logomarca Termelétrica Pernambuco III">
+    <h1>Inspeção On-Line</h1>
+  </header>
+
+  <div class="buttons">
+    <a href="interno.html" class="btn">FORMULÁRIO INTERNO</a>
+    <a href="externo.html" class="btn secondary">FORMULÁRIO EXTERNO</a>
+  </div>
+
+</body>
+</html>
